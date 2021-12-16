@@ -14,7 +14,7 @@ public class Client {
             Registry registry = LocateRegistry.getRegistry(host);
             PubSubInterface stub = (PubSubInterface) registry.lookup("PubSubInterface");
             
-            int op = 0;
+            int ip = 0;
             Scanner s = new Scanner(System.in);
 
             do 
@@ -27,9 +27,9 @@ public class Client {
                 System.out.println("5 - send message to a topic;");
                 System.out.println("6 - Quit");
 
-                op = s.nextInt();
+                ip = s.nextInt();
                 
-                switch(op)
+                switch(ip)
                 {
                     case 1:
                         System.out.println(registerPublisher(stub));
@@ -57,7 +57,7 @@ public class Client {
                         break;
                 }
             
-            } while (op != 6);
+            } while (ip != 6);
         
         }
         catch (Exception e)
@@ -108,7 +108,7 @@ public class Client {
             e.printStackTrace();
         }
         
-        return "Nao";
+        return "registerPublisher";
     }
 
     public static String registerTopic(PubSubInterface stub)
@@ -136,6 +136,6 @@ public class Client {
             e.printStackTrace();
         }
         
-        return "No";
+        return "registerTopic";
     }
 }
