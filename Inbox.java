@@ -8,10 +8,10 @@ public class Inbox implements Dodger, Remote
 {
     public Inbox(){};
 
-    public void listMessages(Subscriber remetente) throws RemoteException
+    public void listMessages(Subscriber sender) throws RemoteException
     {
-        System.out.println("\n" + remetente.getEmail());    
-        for (String value : (remetente.getInbox()).values())
+        System.out.println("\n" + sender.getEmail());    
+        for (String value : (sender.getInbox()).values())
             System.out.println(value);
     }
 
