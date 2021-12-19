@@ -10,7 +10,7 @@ public class Topic implements Serializable
     private String description;
     private int id_publisher;
     private String keyword;
-    private ArrayList<String> mensagens = new ArrayList<>();
+    private ArrayList<String> messages = new ArrayList<>();
 
     public Topic(int id, String title, int id_publisher, String keyword)
     {
@@ -22,7 +22,7 @@ public class Topic implements Serializable
 
     public void addMessage(String message)
     {
-        this.mensagens.add(message);
+        this.messages.add(message);
     }
 
     public int getId() {
