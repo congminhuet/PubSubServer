@@ -120,7 +120,7 @@ public class Client {
             String title = c.nextLine();
 
             System.out.println("enter the keyword: ");
-            String palavra = c.nextLine();
+            String key = c.nextLine();
 
             System.out.println("enter the topic id: ");
             int id = c.nextInt();            
@@ -128,7 +128,7 @@ public class Client {
             System.out.println("Enter the topic publisher id: ");
             int id_publisher = c.nextInt();
 
-            return stub.registerTopic(id, title, id_publisher, palavra);
+            return stub.registerTopic(id, title, id_publisher, key);
         }
         catch (Exception e)
         {
